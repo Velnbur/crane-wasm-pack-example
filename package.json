@@ -1,0 +1,10 @@
+{
+  "name": "crane-wasm-pack-example",
+  "description": "A sample project for using wasm-pack with Crane",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "wasm-pack build -t nodejs --out-dir ./pkg ."
+  },
+  "license": "MIT",
+  "readme": "README.md"
+}

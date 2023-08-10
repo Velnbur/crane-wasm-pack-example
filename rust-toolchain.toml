@@ -1,0 +1,10 @@
+[toolchain]
+channel = "1.70.0" # for some optimizations
+components = ["clippy", "rustfmt", "rust-src"]
+targets = [
+    "wasm32-unknown-unknown",
+    "aarch64-apple-darwin",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+]
