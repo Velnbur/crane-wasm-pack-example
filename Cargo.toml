@@ -10,3 +10,4 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 wasm-bindgen = { version = "=0.2.84", default-features = false }
+js-sys = "0.3.61"

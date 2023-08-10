@@ -50,7 +50,6 @@
 
         crate = craneLib.buildPackage ({
           inherit src;
-          cargoExtraArgs = "";
           doCheck = false;
 
           buildPhaseCargoCommand = ''
@@ -66,12 +65,13 @@
             nodejs
           ] ++ lib.optional stdenv.isLinux [
             strace
+          ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
+            pkgs.libiconv
           ];
         });
       in
       rec {
         checks = {
-          # Checks that packages are build at all
           inherit crate;
         };
 
